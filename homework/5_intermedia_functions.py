@@ -41,12 +41,13 @@ estudiantes = [
   {'first_name' : 'KB', 'last_name' : 'Tonel'}]
 
 def iterateDictionary(some_list):
-  for some_dic in some_list: #{'first_name':  'Michael', 'last_name' : 'Jordan'}
-    for key in some_dic.keys():
-      print(f'{key} - {some_dic[key]}')
+  for i in range(0, len(some_list)): #{'first_name':  'Michael', 'last_name' : 'Jordan'}
+    result= ""
+    for key, val in some_list[i].items():
+      result += f'{key} - {val}, '
+    print(result)
 
 iterateDictionary(estudiantes)
-
 # debería devolver: (está bien si cada par clave-valor termina en 2 líneas separadas;
 # un bonus para que aparezcan exactamente como se muestra a continuación)
 #first_name - Michael, last_name - Jordan
